@@ -8,20 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		4E930C161FB0D06E00115218 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E930C151FB0D06E00115218 /* AppDelegate.swift */; };
-		4E930C181FB0D06E00115218 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E930C171FB0D06E00115218 /* ViewController.swift */; };
+		4E930C181FB0D06E00115218 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E930C171FB0D06E00115218 /* CameraViewController.swift */; };
 		4E930C1B1FB0D06E00115218 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E930C191FB0D06E00115218 /* Main.storyboard */; };
 		4E930C1D1FB0D06E00115218 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4E930C1C1FB0D06E00115218 /* Assets.xcassets */; };
 		4E930C201FB0D06E00115218 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E930C1E1FB0D06E00115218 /* LaunchScreen.storyboard */; };
+		4EE5A67C1FB0E25B009859D7 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE5A67B1FB0E25B009859D7 /* Extensions.swift */; };
+		4EE5A67E1FB0EB13009859D7 /* SqueezeNet.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 4EE5A67D1FB0EB13009859D7 /* SqueezeNet.mlmodel */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		4E930C121FB0D06E00115218 /* What is this.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "What is this.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E930C151FB0D06E00115218 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		4E930C171FB0D06E00115218 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		4E930C171FB0D06E00115218 /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		4E930C1A1FB0D06E00115218 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4E930C1C1FB0D06E00115218 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4E930C1F1FB0D06E00115218 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4E930C211FB0D06E00115218 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4EE5A67B1FB0E25B009859D7 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		4EE5A67D1FB0EB13009859D7 /* SqueezeNet.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = SqueezeNet.mlmodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +58,40 @@
 		4E930C141FB0D06E00115218 /* What is this */ = {
 			isa = PBXGroup;
 			children = (
+				4EE5A67A1FB0E249009859D7 /* Extensions */,
 				4E930C151FB0D06E00115218 /* AppDelegate.swift */,
-				4E930C171FB0D06E00115218 /* ViewController.swift */,
-				4E930C191FB0D06E00115218 /* Main.storyboard */,
+				4EE5A6711FB0D16C009859D7 /* Controllers */,
+				4EE5A6721FB0D176009859D7 /* Storyboard */,
 				4E930C1C1FB0D06E00115218 /* Assets.xcassets */,
-				4E930C1E1FB0D06E00115218 /* LaunchScreen.storyboard */,
+				4EE5A67D1FB0EB13009859D7 /* SqueezeNet.mlmodel */,
 				4E930C211FB0D06E00115218 /* Info.plist */,
 			);
 			path = "What is this";
+			sourceTree = "<group>";
+		};
+		4EE5A6711FB0D16C009859D7 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				4E930C171FB0D06E00115218 /* CameraViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		4EE5A6721FB0D176009859D7 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				4E930C191FB0D06E00115218 /* Main.storyboard */,
+				4E930C1E1FB0D06E00115218 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		4EE5A67A1FB0E249009859D7 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				4EE5A67B1FB0E25B009859D7 /* Extensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -136,7 +166,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4E930C181FB0D06E00115218 /* ViewController.swift in Sources */,
+				4EE5A67C1FB0E25B009859D7 /* Extensions.swift in Sources */,
+				4EE5A67E1FB0EB13009859D7 /* SqueezeNet.mlmodel in Sources */,
+				4E930C181FB0D06E00115218 /* CameraViewController.swift in Sources */,
 				4E930C161FB0D06E00115218 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -274,12 +306,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YMJ3466P6S;
 				INFOPLIST_FILE = "What is this/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "DAZ.What-is-this";
+				PRODUCT_BUNDLE_IDENTIFIER = com.DAZ.Whatisthis;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -289,12 +323,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YMJ3466P6S;
 				INFOPLIST_FILE = "What is this/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "DAZ.What-is-this";
+				PRODUCT_BUNDLE_IDENTIFIER = com.DAZ.Whatisthis;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
