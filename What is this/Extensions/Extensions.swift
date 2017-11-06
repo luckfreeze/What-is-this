@@ -54,7 +54,7 @@ extension CameraViewController: AVCapturePhotoCaptureDelegate {
                 
                 self.titleLabel.text = "Well this is \(identification)"
                 self.confidentialLabel.text = "Confidence: \(confidence)%"
-                synthesizerSpeech(from: unkonwMessage)
+                synthesizerSpeech(from: sentence)
                 break
             }
         }
